@@ -1,0 +1,94 @@
+@use './common/images.scss';
+
+body {
+    min-width: 1200px;
+}
+
+.SectionContainer {
+    position: relative;
+    overflow: hidden;
+    background: {
+        image: inherit;
+        repeat: inherit;
+        attachment: inherit;
+        origin: inherit;
+        clip: inherit;
+        color: inherit;
+        size: cover;
+        position: center center;
+    }
+}
+
+.ResponseiveSection {
+    width: 1040px;
+    height: auto;
+    margin: 0px auto;
+    position: relative;
+}
+
+.ContentLogo {
+    position: absolute;
+    top: 150px;
+    width: 400px;
+    height: 338px;
+    padding-top: 280px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 15px;
+    font-family: sans-serif;
+    color: rgba(58, 58, 58, 0.7);
+    background: {
+        size: 400px 338px;
+        image: url(images.$triplelogo-url);
+        repeat: no-repeat;
+    }
+}
+
+.MetricsContainer {
+    margin-left: 623px;
+    padding-top: 150px;
+}
+
+.MetricItem {
+    margin-bottom: 20px;
+    color: rgb(58, 58, 58);
+    font-family: sans-serif;
+    font-size: 36px;
+    letter-spacing: -1px;
+    
+    & strong {
+        font-weight: bold;
+    }
+}
+
+.AwardsContainer {
+    margin: 50px 0px 140px 623px;
+    white-space: nowrap;
+}
+
+.AwardItem {
+    display: inline-block;
+    margin-right: 39px;
+    padding: 5px 0px 5px 62px;
+    height: 54px;
+    color: rgba(58, 58, 58, 0.8);
+    line-height: 22px;
+    background: {
+        size: 54px 54px;
+        position: left top;
+        repeat: no-repeat;
+    }
+    font: {
+        family: sans-serif;
+        weight: bold;
+        size: 14px;
+    }
+
+    &.PlayStore {
+        background-image: url(images.$playstore-url);
+    }
+
+    &.AppStore {
+        background-image: url(images.$applebadge-url);
+    }
+}
