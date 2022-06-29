@@ -1,31 +1,24 @@
-import React, { useRef } from 'react';
+import React from 'react';
+import MetricItem from './MetricItem';
 
 const MetricsContainer = () => {
-    const containerRef = useRef();
-
     return (
-        <div ref={containerRef} className="MetricsContainer">
-            <div className="MetricItem">
-                <strong>
-                    <span>700</span>
-                    만 명
-                </strong>
-                의 여행자
-            </div>
-            <div className="MetricItem">
-                <strong>
-                    <span>100</span>
-                    만 개
-                </strong>
-                의 여행 리뷰
-            </div>
-            <div className="MetricItem">
-                <strong>
-                    <span>470</span>
-                    만 개
-                </strong>
-                의 여행 일정
-            </div>
+        <div className="MetricsContainer">
+            <MetricItem 
+                count={"700"}
+                bold={"만 명"}
+                text={"의 여행자"}
+            />
+            <MetricItem 
+                count={"100"}
+                bold={"만 개"}
+                text={"의 여행 리뷰"}
+            />
+            <MetricItem 
+                count={"470"}
+                bold={"만 개"}
+                text={"의 여행 일정"}
+            />
         </div>
     );
 }
