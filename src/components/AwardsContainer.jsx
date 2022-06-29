@@ -1,9 +1,12 @@
 import React from 'react';
+import useFadeIn from '../hoc/useFadeIn';
 import AwardItem from './AwardItem';
 
 const AwardsContainer = () => {
+    const isShow = useFadeIn(200);
+
     return (
-        <div className="AwardsContainer">
+        <div className={`AwardsContainer ${isShow ? "" : "fade-in"}`}>
             <AwardItem 
                 key={"0"}
                 text={["2018 구글 플레이스토어", "올해의 앱 최우수상 수상"]}

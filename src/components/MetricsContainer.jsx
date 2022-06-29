@@ -1,9 +1,12 @@
 import React from 'react';
+import useFadeIn from '../hoc/useFadeIn';
 import MetricItem from './MetricItem';
 
 const MetricsContainer = () => {
+    const isShow = useFadeIn(100);
+
     return (
-        <div className="MetricsContainer">
+        <div className={`MetricsContainer ${isShow ? "" : "fade-in"}`}>
             <MetricItem 
                 count={"700"}
                 bold={"만 명"}

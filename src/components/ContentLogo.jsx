@@ -1,8 +1,11 @@
 import React from 'react';
+import useFadeIn from '../hoc/useFadeIn';
 
 const ContentLogo = () => {
+    const isShow = useFadeIn(0);
+
     return (
-        <div className="ContentLogo">
+        <div className={`ContentLogo ${isShow ? "" : "fade-in"}`}>
             2021년 12월 기준
         </div>
     );
