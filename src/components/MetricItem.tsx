@@ -1,8 +1,9 @@
 import React from 'react';
 import useCountUp from '../hoc/useCountUp';
+import { IMetric } from './MetricsContainer';
 
-const MetricItem = ({count, bold, text}) => {
-    const [ countRef ] = useCountUp();
+const MetricItem = ({count, bold, text}: IMetric) => {
+    const countRef = useCountUp();
 
     return (
         <div className="MetricItem">

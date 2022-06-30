@@ -1,14 +1,18 @@
 import { useLayoutEffect, useState } from "react";
 
-const useFadeIn = (n) => {
-    const [show, setShow] = useState(false);
-    const delay = 700 + (n * 100);
+interface IFadeIn {
+    (order: number): boolean
+}
 
+const useFadeIn: IFadeIn = order => {
+    const [show, setShow] = useState(false);
+    
     useLayoutEffect(() => {
+        const delay = 700 + (order * 100);
         setTimeout(() => {
             setShow(true);
         }, delay);
-    }, [delay]);
+    }, [order]);
 
     return show;
 }
