@@ -4,7 +4,7 @@ const AwardItem = ({text, store}) => {
     const lastIndex = text.length - 1;
 
     return (
-        <div className={`AwardItem ${store}`}>
+        <div data-store={`${store}`} className="AwardItem">
             {text.map((item, index) => {
                 return (
                     <React.Fragment key={index}>

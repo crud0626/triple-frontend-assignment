@@ -1,4 +1,4 @@
-import './common/reset.scss';
+import './common/_reset.scss';
 import './App.scss';
 
 import React from 'react';

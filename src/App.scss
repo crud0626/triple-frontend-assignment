@@ -1,4 +1,4 @@
-@use './common/images.scss';
+@use './common/_images.scss';
 
 body {
     min-width: 1200px;
@@ -29,11 +29,6 @@ body {
         opacity: 0;
         transition: all 700ms;
         animation: fadeIn 700ms;
-
-        &:nth-child(1) {
-            transition-delay: 0ms;
-            animation-delay: 0ms;
-        }
 
         &:nth-child(2) {
             transition-delay: 100ms;
@@ -105,11 +100,11 @@ body {
         size: 14px;
     }
 
-    &.PlayStore {
+    &[data-store=playstore] {
         background-image: url(images.$playstore-url);
     }
 
-    &.AppStore {
+    &[data-store=appstore] {
         background-image: url(images.$applebadge-url);
     }
 }
@@ -125,3 +120,4 @@ body {
         opacity: 1;
     }
 }
+
