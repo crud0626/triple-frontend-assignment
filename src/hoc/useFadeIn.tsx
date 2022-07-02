@@ -1,20 +1,17 @@
 import { useLayoutEffect, useState } from "react";
 
 interface IFadeIn {
-    (order: number): boolean
+    (): boolean
 }
 
-const useFadeIn: IFadeIn = order => {
-    const [show, setShow] = useState(false);
+const useFadeIn: IFadeIn = () => {
+    const [isShow, setIsShow] = useState(false);
     
     useLayoutEffect(() => {
-        const delay = 700 + (order * 100);
-        setTimeout(() => {
-            setShow(true);
-        }, delay);
-    }, [order]);
+        setIsShow(true);
+    }, []);
 
-    return show;
+    return isShow;
 }
 
 export default useFadeIn;

@@ -9,7 +9,7 @@ export interface IMetric {
 }
 
 const MetricsContainer = () => {
-    const isShow = useFadeIn(1);
+    const isShow = useFadeIn();
     const [info, setInfo] = useState<IMetric[]>([
         {count: "700", bold: "만 명", text: "의 여행자"},
         {count: "100", bold: "만 개", text: "의 여행 리뷰"},
@@ -17,7 +17,7 @@ const MetricsContainer = () => {
     ]);
 
     return (
-        <div className={`MetricsContainer ${isShow ? "" : "fade-in"}`}>
+    <div className={`MetricsContainer ${isShow ? "fade-in" : ""}`}>
             {
                 info.map((item: IMetric, index: number) =>
                     <MetricItem 
